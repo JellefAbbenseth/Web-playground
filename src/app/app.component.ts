@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   alttext: string = "under-construction";
+  path: string = "./assets/under-construction.jpg";
 }
