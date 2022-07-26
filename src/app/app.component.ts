@@ -5,7 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  alttext: string = "under-construction";
-  path: string = "./assets/under-construction.jpg";
-}
+export class AppComponent {}
