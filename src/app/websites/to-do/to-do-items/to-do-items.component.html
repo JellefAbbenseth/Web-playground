@@ -1,15 +1,15 @@
 <div class="main">
-    <form>
+    <form [formGroup]="toDoItemsForm" (ngSubmit)="onX()">
         <table>
             <tr>
                 <td class="tbl-todo">
-                    <label for="todo">Essen</label>
+                    <label for="todo">{{ toDoText }}</label>
                 </td>
                 <td class="tbl-checkbox">
-                    <input type="checkbox">
+                    <input id="done" type="checkbox" formControlName="done">
                 </td>
                 <td class="tbl-button">
-                    <button type="button">X</button>
+                    <button type="submit">X</button>
                 </td>
             </tr>
         </table>
