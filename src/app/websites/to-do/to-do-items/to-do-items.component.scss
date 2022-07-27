@@ -9,5 +9,26 @@
 
     table {
         width: 100%;
+
+        .tbl-todo {
+            width: 40vw;
+            margin: 0 2vw 0 2vw;
+            padding: 10px 2vw 10px 2vw;
+        }
+
+        .tbl-checkbox {
+            width: 2vw;
+        }
+
+        .tbl-button {
+            width: 2vw;
+        }
+
+        button {
+            height: 25px;
+            width: 25px;
+            background-color: rgb(230, 44, 44);
+            border-radius: 5px;
+        }
     }
 }
