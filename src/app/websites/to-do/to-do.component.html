@@ -2,9 +2,52 @@
     <div class="header">
         <h2>To do list</h2>
     </div>
-    <div class="body">
-        <app-to-do-items></app-to-do-items>
-        <app-to-do-items></app-to-do-items>
-        <app-to-do-items></app-to-do-items>
+    <div class="new_task">
+        <form [formGroup]="addToDo" (ngSubmit)="onSubmit()">
+            <label for="todo">To-do:</label>
+            <div class="task">
+                <input type="text" formControlName="task">
+                <button class="submit_button" type="submit" [disabled]="addToDo.invalid">Submit</button>
+            </div>
+            <div class="warning" *ngIf="addToDo.get('task')?.invalid && (addToDo.get('task')?.dirty || addToDo.get('task')?.touched)">
+                Please provide a task with a minimum length of 3!
+            </div>
+        </form>
+    </div>
+    <hr *ngIf="done_list.length > 0">
+    <div class="done_list">
+        <div class="done_item" *ngFor="let item of done_list">
+            <table>
+                <tr>
+                    <td class="tbl-todo">
+                        <label for="todo">{{ item["text"] }}</label>
+                    </td>
+                    <td class="tbl-button">
+                        <button class="undone_button" type="button" (click)="set_undone(item['id'])">Undo</button>
+                    </td>
+                    <td class="tbl-button">
+                        <button class="delete_button" type="button" (click)="onX(item['id'])">X</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <hr *ngIf="list.length > 0">
+    <div class="todo_list">
+        <div class="todo_item" *ngFor="let item of list">
+            <table>
+                <tr>
+                    <td class="tbl-todo">
+                        <label for="todo">{{ item["text"] }}</label>
+                    </td>
+                    <td class="tbl-button">
+                        <button class="done_button" type="button" (click)="set_done(item['id'])">Done</button>
+                    </td>
+                    <td class="tbl-button">
+                        <button class="delete_button" type="button" (click)="onX(item['id'])">X</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>

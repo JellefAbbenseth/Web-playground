@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UnderConstructionComponent } from './websites/under-construction/under-construction.component';
 import { ToDoComponent } from './websites/to-do/to-do.component';
-import { ToDoItemsComponent } from './websites/to-do/to-do-items/to-do-items.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -13,7 +12,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     UnderConstructionComponent,
     ToDoComponent,
-    ToDoItemsComponent
   ],
   imports: [
     BrowserModule,

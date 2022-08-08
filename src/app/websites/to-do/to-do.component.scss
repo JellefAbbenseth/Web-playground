@@ -1,20 +1,117 @@
 .main {
     height: 100vh;
     width: 100vw;
-}
-
-.header {
-    width: 20vw;
-    margin: 0 auto;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-
-    h2 {
-        text-align: center;
+    
+    .header {
+        width: 20vw;
+        margin: 0 auto;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    
+        h2 {
+            text-align: center;
+        }
+    }
+    
+    hr,
+    .new_task,
+    .done_list,
+    .todo_list {
+        width: 50vw;
+        margin: 0 auto;
+    }
+    
+    hr {
+        border: 5px solid black;
+        border-radius: 10px;
     }
 }
 
-.body {
-    width: 50vw;
-    margin: 0 auto;
+button {
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+}
+
+.new_task {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+
+    .task {
+        width: 48vw;
+        padding: 10px 2vw 10px 2vw;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    input {
+        width: 100%;
+        margin: 2px;
+    }
+
+    label {
+        font-size: larger;
+    }
+
+    .submit_button {
+        margin: 2px;
+        width: 50px;
+        background-color: rgba(63, 110, 241, 0.445);
+        border-radius: 5px;
+    }
+
+    .warning {
+        color: red;
+    }
+}
+
+
+.done_item,
+.todo_item {
+    border: solid 2px;
+    border-radius: 5px;
+    margin: 0.5em;
+    padding: 0.25em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    table {
+        width: 100%;
+
+        .tbl-todo {
+            width: 40vw;
+            margin: 0 2vw 0 2vw;
+            padding: 10px 2vw 10px 2vw;
+        }
+
+        .tbl-checkbox {
+            width: 2vw;
+        }
+
+        .tbl-button {
+            width: 2vw;
+        }
+
+        .done_button {
+            background-color: rgb(0, 48, 0);
+            color: white;
+            width: 50px;
+        }
+
+        .undone_button {
+            background-color: rgb(230, 255, 7);
+            width: 50px;
+        }
+
+        .delete_button {
+            background-color: rgb(230, 44, 44);
+        }
+    }
+}
+
+.done_item {
+    background-color: rgba(72, 245, 72, 0.438);
 }
