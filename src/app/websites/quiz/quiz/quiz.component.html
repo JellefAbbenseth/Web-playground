@@ -1,0 +1,17 @@
+<div class="main">
+    <div class="header">
+        <h2>Quiz</h2>
+    </div>
+    <div class="main_body">
+        <div class="card" id="card">
+            <span>{{ text }}</span>
+        </div>
+        <div class="input">
+            <form class="answer_form" [formGroup]="quiz" (ngSubmit)="onSubmit()">
+                <label for="answer">Your answer:</label>
+                <input type="text" formControlName="answer">
+                <button type="submit" [disabled]="quiz.invalid">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

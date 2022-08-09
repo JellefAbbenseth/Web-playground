@@ -1,0 +1,91 @@
+.main {
+    // https://colorhunt.co/palette/ff1e00e8f9fd59ce8f000000
+    --color-black: #000000;
+    --color-green: #59CE8F;
+    --color-grey: #E8F9FD;
+    --color-red: #FF1E00;
+
+    background-color: var(--color-black);
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    .header {
+        color: var(--color-grey);
+        width: min-content;
+        padding-top: 5vh;
+        height: 10vh;
+
+        h2 {
+            font-size: 52px;
+        }
+    }
+}
+
+.main_body {
+    width: 60vw;
+    min-height: 80vh;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    .card {
+        min-height: 40vh;
+        width: 40vw;
+        padding: 5vh 5vw;
+        margin: 5vh 5vw;
+
+        border: 5px solid var(--color-grey);
+        border-radius: 50px;
+        background-color: var(--color-grey);
+
+        display: table;
+        text-align: center;
+
+        span {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: left;
+            font-size: 36px;
+        }
+    }
+
+    .input {
+        padding: 0vh 5vw;
+        margin: 0vh 15vw;
+        
+        .answer_form {
+            width: max-content;
+            min-height: 10vh;
+            width: 20vw;
+            background-color: var(--color-grey);
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+
+            label {
+                font-size: 24px;
+                padding: 10px;
+            }
+
+            input[type=text] {
+                margin: 10px;
+                padding-left: 10px;
+                font-size: 18px;
+                border: 2px solid var(--color-black);
+                border-radius: 10px;
+            }
+
+            button {
+                margin: 0px 10px 10px 10px;
+                background-color: var(--color-green);
+                border: 2px solid var(--color-black);
+                font-size: 18px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
