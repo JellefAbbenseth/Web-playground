@@ -10,7 +10,8 @@
             <form class="answer_form" [formGroup]="quiz" (ngSubmit)="onSubmit()">
                 <label for="answer">Your answer:</label>
                 <input type="text" formControlName="answer">
-                <button type="submit" [disabled]="quiz.invalid">Submit</button>
+                <button type="submit" *ngIf="unanswered" [disabled]="quiz.invalid">Submit</button>
+                <button type="button" *ngIf="!unanswered" (click)="onNext()">Next</button>
             </form>
         </div>
     </div>

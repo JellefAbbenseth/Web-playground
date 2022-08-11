@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { QuizComponent } from './websites/quiz/quiz/quiz.component';
+import { QuizComponent } from './websites/quiz/quiz.component';
 import { ToDoComponent } from './websites/to-do/to-do.component';
 import { UnderConstructionComponent } from './websites/under-construction/under-construction.component';
 
