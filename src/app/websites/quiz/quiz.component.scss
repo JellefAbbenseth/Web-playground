@@ -89,3 +89,19 @@
         }
     }
 }
+
+@media only screen and (max-width: 800px) {
+    .main_body {
+        width: 100vw;
+
+        .card {
+            width: 80vw;
+        }
+
+        .input {
+            .answer_form {
+                width: 60vw;
+            }
+        }
+    }
+}

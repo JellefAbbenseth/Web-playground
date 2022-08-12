@@ -4,14 +4,15 @@
     </div>
     <div class="main_body">
         <div class="card" id="card">
-            <span>{{ text }}</span>
+            <span>{{ question_text }}</span>
         </div>
         <div class="input">
             <form class="answer_form" [formGroup]="quiz" (ngSubmit)="onSubmit()">
                 <label for="answer">Your answer:</label>
                 <input type="text" formControlName="answer">
                 <button type="submit" *ngIf="unanswered" [disabled]="quiz.invalid">Submit</button>
-                <button type="button" *ngIf="!unanswered" (click)="onNext()">Next</button>
+                <button type="button" *ngIf="!unanswered && !quiz_ends" (click)="onNext()">Next</button>
+                <button type="button" *ngIf="quiz_ends" (click)="startQuiz()">Restart</button>
             </form>
         </div>
     </div>
